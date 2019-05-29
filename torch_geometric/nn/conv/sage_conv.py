@@ -12,11 +12,11 @@ class SAGEConv(torch.nn.Module):
     Large Graphs" <https://arxiv.org/abs/1706.02216>`_ paper
 
     .. math::
-        \mathbf{\hat{x}}_i &= \mathbf{\Theta} \cdot
+        $\mathbf{\hat{x}}_i = \mathbf{\Theta} \cdot
         \mathrm{mean}_{j \in \mathcal{N(i) \cup \{ i \}}}(\mathbf{x}_j)
 
-        \mathbf{x}^{\prime}_i &= \frac{\mathbf{\hat{x}}_i}
-        {\| \mathbf{\hat{x}}_i \|_2}.
+        \mathbf{x}^{\prime}_i = \frac{\mathbf{\hat{x}}_i}
+        {\| \mathbf{\hat{x}}_i \|_2}.$
 
     Args:
         in_channels (int): Size of each input sample.
